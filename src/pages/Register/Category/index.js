@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Template from '../../../components/Template';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function RegisterCategory() {
   const initCategory = {
@@ -11,21 +12,7 @@ function RegisterCategory() {
     color: '',
   };
   const [categories, setCategories] = useState([]);
-  const [category, setCategory] = useState(initCategory);
-
-  function addCategory(input, value) {
-    setCategory({
-      ...category,
-      [input]: value,
-    });
-  }
-
-  function handleCategory(event) {
-    addCategory(
-      event.target.getAttribute('name'),
-      event.target.value,
-    );
-  }
+  const { values, handleChange, clearForm } = useForm(initCategory);
 
   useEffect(() => {
     const url = window.location.hostname.includes('localhost')
@@ -46,17 +33,17 @@ function RegisterCategory() {
     <Template>
       <h1>
         Cadastro de categorias |
-        {category.name}
+        {values.name}
       </h1>
 
       <form onSubmit={(event) => {
         event.preventDefault();
         setCategories([
           ...categories,
-          category,
+          values,
         ]);
 
-        setCategory(initCategory);
+        clearForm(initCategory);
       }}
       >
 
@@ -64,27 +51,27 @@ function RegisterCategory() {
           label="Nome da categoria"
           type="text"
           name="name"
-          value={category.name}
-          onChange={handleCategory}
+          value={values.name}
+          onChange={handleChange}
         />
 
         <FormField
           label="Descrição"
           type="textarea"
           name="description"
-          value={category.description}
-          onChange={handleCategory}
+          value={values.description}
+          onChange={handleChange}
         />
 
         <FormField
           label="Cor"
           type="color"
           name="color"
-          value={category.color}
-          onChange={handleCategory}
+          value={values.color}
+          onChange={handleChange}
         />
 
-        <Button>
+        <Button type="submit">
           Cadastrar
         </Button>
       </form>

@@ -1,53 +1,54 @@
-import React from 'react';
-import Menu from '../../components/Menu';
+import React, { useEffect, useState } from 'react';
 import DadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
+import categoriesRepository from '../../repositories/categories';
+import Template from '../../components/Template';
 
 function Home() {
+  const [categoriesWithVideos, setCategoriesWithVideos] = useState([]);
+
+  useEffect(() => {
+    categoriesRepository.getAllWithVideos()
+      .then((response) => {
+        setCategoriesWithVideos(response);
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.log(err);
+      });
+  }, []);
+
   return (
-    <div>
-      <Menu />
+    <Template paddingAll={0}>
+      {categoriesWithVideos.length === 0 && (<div>Loading...</div>)}
 
-      <BannerMain
-        videoTitle={DadosIniciais.categorias[0].videos[0].titulo}
-        url={DadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"O que é front-end? Trabalhando na área"}
-      />
+      {categoriesWithVideos.map((category, index) => {
+        if (index === 0) {
+          return (
+            <div key={category.id}>
+              <BannerMain
+                videoTitle={categoriesWithVideos[0].videos[0].title}
+                url={categoriesWithVideos[0].videos[0].url}
+                videoDescription="O que é front-end? Trabalhando na área"
+              />
 
-      <Carousel
-        ignoreFirstVideo
-        category={DadosIniciais.categorias[0]}
-      />
+              <Carousel
+                ignoreFirstVideo
+                category={categoriesWithVideos[0]}
+              />
+            </div>
+          );
+        }
 
-      <Carousel
-        ignoreFirstVideo
-        category={DadosIniciais.categorias[1]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={DadosIniciais.categorias[2]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={DadosIniciais.categorias[3]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={DadosIniciais.categorias[4]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={DadosIniciais.categorias[5]}
-      />
-
-      <Footer />
-    </div>
+        return (
+          <Carousel
+            key={category.id}
+            category={category}
+          />
+        );
+      })}
+    </Template>
   );
 }
 

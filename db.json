@@ -2,27 +2,101 @@
   "categories": [
     {
       "id": 1,
-      "name": "Categoria 1",
-      "description": "Descrição da categoria 1",
-      "color": "#cbd1ff"
+      "title": "Categoria 1",
+      "color": "#cccccc",
+      "link_extra": {
+        "text": "Teste blá blá",
+        "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
+      }
     },
     {
       "id": 2,
-      "name": "Categoria 2",
-      "description": "Descrição da categoria 2",
-      "color": "#cbd1ff"
+      "title": "Categoria 2",
+      "color": "#cbd1ff",
+      "link_extra": {
+        "text": "Teste blá blá",
+        "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
+      }
     },
     {
       "id": 3,
-      "name": "Categoria 3",
-      "description": "Descrição da categoria 3",
-      "color": "#cbd1ff"
+      "title": "Categoria 3",
+      "color": "#cbd1ff",
+      "link_extra": {
+        "text": "Teste blá blá",
+        "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
+      }
     },
     {
       "id": 4,
-      "name": "Categoria 4",
-      "description": "Descrição da categoria 4",
-      "color": "#cbd1ff"
+      "title": "Categoria 4",
+      "color": "#cbd1ff",
+      "link_extra": {
+        "text": "Teste blá blá",
+        "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "title": "Teste vídeo",
+      "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "title": "Teste vídeo",
+      "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
+    },
+    {
+      "id": 3,
+      "categoryId": 2,
+      "title": "Teste vídeo",
+      "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
+    },
+    {
+      "id": 4,
+      "categoryId": 3,
+      "title": "Teste vídeo",
+      "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
+    },
+    {
+      "id": 5,
+      "categoryId": 4,
+      "title": "Teste vídeo",
+      "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
+    },
+    {
+      "title": "Vídeo padrão",
+      "url": "https://www.youtube.com/watch?v=O0HyIamRQhg",
+      "categoryId": 1,
+      "id": 6
+    },
+    {
+      "title": "Vídeo padrão",
+      "url": "https://www.youtube.com/watch?v=O0HyIamRQhg",
+      "categoryId": 1,
+      "id": 7
+    },
+    {
+      "title": "Vídeo padrão",
+      "url": "https://www.youtube.com/watch?v=O0HyIamRQhg",
+      "categoryId": 2,
+      "id": 8
+    },
+    {
+      "title": "Vídeo padrão",
+      "url": "https://www.youtube.com/watch?v=O0HyIamRQhg",
+      "categoryId": 3,
+      "id": 9
+    },
+    {
+      "title": "Vídeo padrão",
+      "url": "https://www.youtube.com/watch?v=O0HyIamRQhg",
+      "categoryId": 2,
+      "id": 10
     }
   ]
 }
