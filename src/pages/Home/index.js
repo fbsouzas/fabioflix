@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import DadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import categoriesRepository from '../../repositories/categories';

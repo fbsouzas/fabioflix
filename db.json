@@ -2,7 +2,7 @@
   "categories": [
     {
       "id": 1,
-      "title": "Categoria 1",
+      "name": "Categoria 1",
       "color": "#cccccc",
       "link_extra": {
         "text": "Teste blá blá",
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "title": "Categoria 2",
+      "name": "Categoria 2",
       "color": "#cbd1ff",
       "link_extra": {
         "text": "Teste blá blá",
@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "title": "Categoria 3",
+      "name": "Categoria 3",
       "color": "#cbd1ff",
       "link_extra": {
         "text": "Teste blá blá",
@@ -29,7 +29,7 @@
     },
     {
       "id": 4,
-      "title": "Categoria 4",
+      "name": "Categoria 4",
       "color": "#cbd1ff",
       "link_extra": {
         "text": "Teste blá blá",
@@ -97,6 +97,12 @@
       "url": "https://www.youtube.com/watch?v=O0HyIamRQhg",
       "categoryId": 2,
       "id": 10
+    },
+    {
+      "title": "Teste vídeo novo",
+      "url": "https://www.youtube.com/watch?v=MtHRiNqbwLw",
+      "categoryId": 4,
+      "id": 11
     }
   ]
 }

@@ -4,6 +4,7 @@ import Template from '../../../components/Template';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoriesRepository from '../../../repositories/categories';
 
 function RegisterCategory() {
   const initCategory = {
@@ -15,16 +16,11 @@ function RegisterCategory() {
   const { values, handleChange, clearForm } = useForm(initCategory);
 
   useEffect(() => {
-    const url = window.location.hostname.includes('localhost')
-      ? 'http://localhost:3001/categories'
-      : 'mudar a url para produção aqui';
-
-    fetch(url)
-      .then(async (response) => {
-        const result = await response.json();
-
+    categoriesRepository
+      .getAll()
+      .then((response) => {
         setCategories([
-          ...result,
+          ...response,
         ]);
       });
   }, []);

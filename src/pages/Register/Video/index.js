@@ -10,7 +10,7 @@ import categoriesRepository from '../../../repositories/categories';
 function RegisterVideo() {
   const history = useHistory();
   const [categories, setCategories] = useState([]);
-  const categoriesTitles = categories.map(({ title }) => title);
+  const categoriesNames = categories.map(({ name }) => name);
   const { handleChange, values } = useForm({
     title: '',
     url: '',
@@ -20,8 +20,8 @@ function RegisterVideo() {
   useEffect(() => {
     categoriesRepository
       .getAll()
-      .then((allCategories) => {
-        setCategories(allCategories);
+      .then((response) => {
+        setCategories(response);
       });
   }, []);
 
@@ -32,9 +32,7 @@ function RegisterVideo() {
       <form onSubmit={(event) => {
         event.preventDefault();
 
-        const categorySelected = categories.find((category) => {
-          return category.title === values.category;
-        });
+        const categorySelected = categories.find((category) => category.name === values.category);
 
         videosRepository.create({
           title: values.title,
@@ -65,7 +63,7 @@ function RegisterVideo() {
           name="category"
           value={values.category}
           onChange={handleChange}
-          suggestions={categoriesTitles}
+          suggestions={categoriesNames}
         />
 
         <Button type="submit">
