@@ -42,7 +42,6 @@ function RegisterCategory() {
         clearForm(initCategory);
       }}
       >
-
         <FormField
           label="Nome da categoria"
           type="text"

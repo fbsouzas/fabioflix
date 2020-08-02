@@ -33,7 +33,7 @@ Label.Text = styled.span`
 `;
 
 const Input = styled.input`
-  background: #53585D;
+  background: #121212;
   color: #F5F5F5;
   display: block;
   width: 100%;
@@ -42,8 +42,8 @@ const Input = styled.input`
 
   outline: 0;
   border: 0;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid #53585D;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #53585D;
 
   padding: 16px 16px;
   margin-bottom: 45px;

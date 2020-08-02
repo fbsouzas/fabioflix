@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Categoria 1",
-      "color": "#cccccc",
+      "color": "#fab602",
       "link_extra": {
         "text": "Teste blá blá",
         "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "name": "Categoria 2",
-      "color": "#cbd1ff",
+      "color": "#fab602",
       "link_extra": {
         "text": "Teste blá blá",
         "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
@@ -21,7 +21,7 @@
     {
       "id": 3,
       "name": "Categoria 3",
-      "color": "#cbd1ff",
+      "color": "#fab602",
       "link_extra": {
         "text": "Teste blá blá",
         "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
@@ -30,7 +30,7 @@
     {
       "id": 4,
       "name": "Categoria 4",
-      "color": "#cbd1ff",
+      "color": "#fab602",
       "link_extra": {
         "text": "Teste blá blá",
         "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
@@ -41,8 +41,8 @@
     {
       "id": 1,
       "categoryId": 1,
-      "title": "Teste vídeo",
-      "url": "https://www.youtube.com/watch?v=go7BmCqBc-4"
+      "title": "Rough Cut: Tiago Lemos' \"Press Play\" Part",
+      "url": "https://www.youtube.com/watch?v=xZx-0Laa9dE"
     },
     {
       "id": 2,
